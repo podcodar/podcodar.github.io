@@ -60,6 +60,8 @@ module.exports = {
         },
       },
     },
+    // styled-components
+    "gatsby-plugin-styled-components",
     // offline mode
     `gatsby-plugin-offline`,
   ],
