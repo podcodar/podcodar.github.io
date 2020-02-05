@@ -1,0 +1,14 @@
+
+Todo:
+  ✔ Import Roboto as default font and apply it @1h @critical @done(20-02-05 00:59)
+
+  ☐ Create grid for posts @1h @critical
+  ☐ Create Posts Cards @1h @critical
+  ☐ Create highlighted post @1h @critical
+  ☐ Add CI from development branch @1h @critical
+  ☐ Add tags  @1h @high
+    ☐ Filter  @1h @high
+  ☐ search box @1h @high
+  ☐ Make a nice 404 page @1h @high
+  ☐ Refactor default gatsby components @1h @low
+  ☐ Make tests @1h @low
