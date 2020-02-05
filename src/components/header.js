@@ -2,6 +2,8 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
+import Logo from "@components/Logo"
+
 const Header = ({ siteTitle }) => (
   <header
     style={{
@@ -24,7 +26,7 @@ const Header = ({ siteTitle }) => (
             textDecoration: `none`,
           }}
         >
-          {siteTitle}
+          <Logo />
         </Link>
       </h1>
     </div>
