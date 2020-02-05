@@ -51,6 +51,16 @@ module.exports = {
         },
       },
     },
+    // import svg
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /assets/, // See below to configure properly
+        },
+      },
+    },
+    // offline mode
     `gatsby-plugin-offline`,
   ],
 }
