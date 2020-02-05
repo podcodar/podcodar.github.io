@@ -1,15 +1,14 @@
 import React from "react"
 
-import { usePosts } from "../../hooks/posts"
+import { usePosts } from "hooks/posts"
 
 const PostGrid = () => {
   const { posts } = usePosts()
-  debugger
 
   return (
     <>
       {posts.map(item => (
-        <p>
+        <p key={item.path}>
           <a href={item.path}>{item.title}</a>
         </p>
       ))}

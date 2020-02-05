@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 
-import Layout from "../components/layout"
+import Layout from "@components/layout"
 
 const PostTemplate = ({ data }) => {
   // this prop will be injected by the GraphQL query below.
