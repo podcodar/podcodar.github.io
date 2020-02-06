@@ -2,13 +2,16 @@ import React, { useState, useEffect } from "react"
 import Section from "@components/core/Section"
 
 import { usePosts } from "hooks/posts"
+import { useImages } from "hooks/images"
 
-import { Container, SubTitle, Title, Episode } from "./styled"
+import { Container, SubTitle, Title, Episode, Image } from "./styled"
 
 const PostGrid = () => {
   const { highlightedPosts } = usePosts()
   const [postIndex, setPostIndex] = useState(0)
   const selectedPost = highlightedPosts[postIndex]
+  const { getImage } = useImages()
+  const postMarkImage = getImage("post-mark")
 
   useEffect(() => {
     const timerId = setInterval(() => {
@@ -25,9 +28,11 @@ const PostGrid = () => {
     <>
       <Section img={selectedPost.cover}>
         <Container href={selectedPost.path}>
+          <Episode>{selectedPost.episode}</Episode>
           <Title>{selectedPost.title}</Title>
           <SubTitle>{selectedPost.description}</SubTitle>
-          <Episode>{selectedPost.episode}</Episode>
+
+          <Image fluid={postMarkImage.fluid} imgStyle={{ right: 0 }} />
         </Container>
       </Section>
     </>
