@@ -9,7 +9,6 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
-import Container from "@components/core/Container"
 import Header from "@components/Header"
 import "@components/layout.css"
 

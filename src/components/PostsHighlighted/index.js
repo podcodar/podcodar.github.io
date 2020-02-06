@@ -13,7 +13,7 @@ const PostGrid = () => {
   useEffect(() => {
     const timerId = setInterval(() => {
       const next = postIndex + 1
-      setPostIndex(next == highlightedPosts.length ? 0 : next)
+      setPostIndex(next === highlightedPosts.length ? 0 : next)
     }, 3000)
 
     return () => {
