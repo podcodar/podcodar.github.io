@@ -10,7 +10,9 @@ export const usePosts = () => {
             frontmatter {
               path
               date
+              cover
               title
+              episode
               highlight
             }
           }
