@@ -1,20 +1,18 @@
 import React from "react"
 
 import Container from "@components/core/Container"
+import PostsHighlighted from "@components/PostsHighlighted"
 import Section from "@components/core/Section"
 import PostGrid from "@components/PostGrid"
 import Layout from "@components/Layout"
-import Image from "@components/image"
 import SEO from "@components/seo"
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <Section>
+    <Section size="300">
       <Container>
-        <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-          <Image />
-        </div>
+        <PostsHighlighted></PostsHighlighted>
       </Container>
     </Section>
 
