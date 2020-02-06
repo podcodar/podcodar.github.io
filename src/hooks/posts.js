@@ -12,6 +12,8 @@ export const usePosts = () => {
               date
               cover
               title
+              author_name
+              author_email
               episode
               highlight
             }

@@ -1,5 +1,6 @@
 import React from "react"
 import Grid from "@components/core/Grid"
+import PostCard from "@components/PostCard"
 
 import { usePosts } from "hooks/posts"
 
@@ -7,11 +8,9 @@ const PostGrid = () => {
   const { posts } = usePosts()
 
   return (
-    <Grid>
+    <Grid gap="32px">
       {posts.map(item => (
-        <Grid.Item key={item.path}>
-          <a href={item.path}>{item.title}</a>
-        </Grid.Item>
+        <PostCard item={item} />
       ))}
     </Grid>
   )

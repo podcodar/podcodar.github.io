@@ -32,7 +32,7 @@ const PostGrid = () => {
           <Title>{selectedPost.title}</Title>
           <SubTitle>{selectedPost.description}</SubTitle>
 
-          <Image fluid={postMarkImage.fluid} imgStyle={{ right: 0 }} />
+          <Image fluid={postMarkImage.fluid} />
         </Container>
       </Section>
     </>
