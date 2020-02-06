@@ -2,7 +2,7 @@ import styled from "styled-components"
 import { colors } from "helpers/theme"
 
 const Button = styled.a`
-  padding: 0.5em 1em;
+  padding: 0.8em 1.5em;
   color: ${colors.white};
   background-color: ${colors.primary};
   font-size: 16px;
