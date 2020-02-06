@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 
 import Layout from "@components/Layout"
+import Container from "@components/core/Container"
 
 const PostTemplate = ({ data }) => {
   // this prop will be injected by the GraphQL query below.
@@ -10,12 +11,12 @@ const PostTemplate = ({ data }) => {
   const { frontmatter, body } = mdx
   return (
     <Layout>
-      <div className="blog-post">
+      <Container className="blog-post">
         <h1>{frontmatter.title}</h1>
         <h2>{frontmatter.date}</h2>
 
         <MDXRenderer>{body}</MDXRenderer>
-      </div>
+      </Container>
     </Layout>
   )
 }
@@ -28,6 +29,8 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         path
         title
+        cover
+        episode
       }
     }
   }
