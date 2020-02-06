@@ -3,7 +3,8 @@ export const colors = {
   secondary: "rebeccapurple",
 
   "text-primary": "darkgrey",
-  "text-secondary": "white",
+  "text-secondary": "#FFFFFF",
 
-  white: "white",
+  white: "#FFFFFF",
+  black: "#36393f",
 }
