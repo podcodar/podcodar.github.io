@@ -31,13 +31,11 @@ const SectionImage = styled.div`
 const Overlay = styled.div`
   height: 100%;
   background-color: ${colors.black};
-  opacity: 0.2;
+  opacity: 0.6;
   margin-top: -600px;
-  /* filter: blur(5px); */
 `
 
 const Container = styled(CoreContainer)`
-  /* margin-top: -600px; */
   position: absolute;
   top: 50%;
   left: 50%;
