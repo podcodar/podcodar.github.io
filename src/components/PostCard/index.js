@@ -5,11 +5,12 @@ import { Container, Content, Author } from "./styled"
 
 const PostCard = ({ item }) => {
   return (
-    <Container href={item.path} target="_blank">
+    <Container href={item.path}>
       <img src={item.cover} alt="" />
 
       <Content>
-        <h3>{item.title}</h3>
+        <h4>{item.title}</h4>
+        <h6>{item.duration || item.readingTime}</h6>
         <p>{item.description}</p>
 
         <Author>

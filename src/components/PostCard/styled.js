@@ -8,18 +8,23 @@ export const Container = styled.a`
 
   & > img {
     width: 100%;
-    max-height: 200px;
+    max-height: 180px;
     margin-bottom: -5px;
-    filter: blur(1px);
+    /* filter: blur(1px); */
   }
 `
 
 export const Content = styled.div`
   padding: 1em;
   background-color: ${colors.black}22;
+
+  & > h6 {
+    margin: 0;
+    color: ${colors.black}44;
+  }
 `
 
-export const Author = styled.h6`
+export const Author = styled.h5`
   display: flex;
   color: ${colors.black};
   margin-bottom: unset;
