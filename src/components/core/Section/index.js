@@ -1,5 +1,5 @@
 import React from "react"
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 import CoreContainer from "@components/core/Container"
 
 import { colors } from "helpers/theme"
@@ -19,8 +19,12 @@ const SectionImage = styled.div`
   background-position: center;
 
   /* Add the blur effect */
-  filter: blur(8px);
-  -webkit-filter: blur(8px);
+  ${props =>
+    props.blur &&
+    css`
+      filter: blur(8px);
+      -webkit-filter: blur(8px);
+    `}
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
