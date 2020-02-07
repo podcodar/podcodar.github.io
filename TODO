@@ -2,13 +2,21 @@
 Todo:
   ✔ Import Roboto as default font and apply it @1h @critical @done(20-02-05 00:59)
 
-  ☐ Create grid for posts @1h @critical
-  ☐ Create Posts Cards @1h @critical
-  ☐ Create highlighted post @1h @critical
-  ☐ Add CI from development branch @1h @critical
+  ✔ Create grid for posts @1h @critical @done(20-02-07 09:05)
+  ✔ Create Posts Cards @1h @critical @done(20-02-07 09:05)
+  ✔ Create highlighted post @1h @critical @done(20-02-07 09:05)
+  ✔ Add CI from development branch @1h @critical @done(20-02-07 09:05)
+  ☐ Show __duration__ in PostCard @1h @critical
+  ☐ Add __cover__ to PostDetails @2h @critical
+  ☐ Add __duration__ to PostDetails @1h @critical
+  ☐ Add __author__ to PostDetails @1h @critical
+  ☐ Make highlights with __next/back button__ @2h @critical
+  ☐ Make rss feed @1h @critical
+  ☐ Make subscription section @2h @high
+  ☐ Make back to top @2h @high
   ☐ Add tags  @1h @high
     ☐ Filter  @1h @high
   ☐ search box @1h @high
   ☐ Make a nice 404 page @1h @high
-  ☐ Refactor default gatsby components @1h @low
+  ✔ Refactor default gatsby components @1h @low @done(20-02-07 09:05)
   ☐ Make tests @1h @low
