@@ -10,7 +10,7 @@ const PostGrid = () => {
   return (
     <Grid gap="32px">
       {posts.map(item => (
-        <PostCard item={item} />
+        <PostCard key={item.path} item={item} />
       ))}
     </Grid>
   )
