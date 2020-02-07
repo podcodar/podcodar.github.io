@@ -7,7 +7,7 @@ Todo:
   ✔ Create highlighted post @1h @critical @done(20-02-07 09:05)
   ✔ Add CI from development branch @1h @critical @done(20-02-07 09:05)
   ☐ Show __duration__ in PostCard @1h @critical
-  ☐ Add __cover__ to PostDetails @2h @critical
+  ✔ Add __cover__ to PostDetails @2h @critical @done(20-02-07 16:01)
   ☐ Add __duration__ to PostDetails @1h @critical
   ☐ Add __author__ to PostDetails @1h @critical
   ☐ Make highlights with __next/back button__ @2h @critical
