@@ -51,12 +51,12 @@ const Container = styled(CoreContainer)`
   padding: 20px;
 `
 
-const Section = props => {
+const Section = ({ children, ...props }) => {
   return (
     <SectionContainer>
       <SectionImage {...props} />
       <Overlay />
-      <Container>{props.children}</Container>
+      <Container>{children}</Container>
     </SectionContainer>
   )
 }
