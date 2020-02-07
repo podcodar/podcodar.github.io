@@ -12,8 +12,7 @@ const PostCard = ({ item }) => {
         <h4>{item.title}</h4>
         <h6>{item.duration || item.readingTime}</h6>
         <p>{item.description}</p>
-
-        <AuthorProfile item={item} />
+        <AuthorProfile item={item} small />
       </Content>
     </Container>
   )

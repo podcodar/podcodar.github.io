@@ -8,8 +8,8 @@ export const usePosts = () => {
           node {
             excerpt(pruneLength: 100)
             frontmatter {
+              date(formatString: "MMMM DD, YYYY")
               path
-              date
               cover
               title
               episode
