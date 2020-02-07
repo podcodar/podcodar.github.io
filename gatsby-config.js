@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `PodCodar - Seu canal com a programação `,
+    description: `Comece seus primeiros passos na computação com a gente! Aqui você pode interagir, pode se atualizar quanto as novas tendencias, pode pedir ajuda, pode reclamar e ainda PodCodar :)`,
+    author: `@PodCodar`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -18,13 +18,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `PodCodar`,
+        short_name: `PodCodar`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/post-mark.png`, // This path is relative to the root of the site.
       },
     },
     // handle mdx import
