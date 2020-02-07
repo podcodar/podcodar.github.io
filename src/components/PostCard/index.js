@@ -1,7 +1,7 @@
 import React from "react"
-import Gravatar from "react-gravatar"
+import AuthorProfile from "@components/core/AuthorProfile"
 
-import { Container, Content, Author } from "./styled"
+import { Container, Content } from "./styled"
 
 const PostCard = ({ item }) => {
   return (
@@ -13,10 +13,7 @@ const PostCard = ({ item }) => {
         <h6>{item.duration || item.readingTime}</h6>
         <p>{item.description}</p>
 
-        <Author>
-          <Gravatar email={item.author_email} />
-          <span>{item.author_name}</span>
-        </Author>
+        <AuthorProfile item={item} />
       </Content>
     </Container>
   )
