@@ -3,11 +3,14 @@ import Gravatar from "react-gravatar"
 
 import { Author } from "./styled"
 
-const AuthorProfile = ({ item }) => {
+const AuthorProfile = ({ item, ...props }) => {
   return (
-    <Author>
+    <Author {...props}>
       <Gravatar email={item.author_email} />
-      <span>{item.author_name}</span>
+      <div>
+        <p>{item.author_name}</p>
+        <span>{item.date}</span>
+      </div>
     </Author>
   )
 }
