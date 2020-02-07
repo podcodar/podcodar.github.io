@@ -22,6 +22,8 @@ const SectionImage = styled.div`
   filter: blur(8px);
   -webkit-filter: blur(8px);
 
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
   /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
