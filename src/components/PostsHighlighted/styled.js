@@ -23,9 +23,8 @@ export const Episode = styled.h6`
 
 export const Image = styled(Img)`
   right: 0;
-  max-width: 200px;
   overflow: hidden;
-  width: 200px;
+  width: 120px;
   bottom: -100px;
   position: absolute !important;
   opacity: 0.6;
