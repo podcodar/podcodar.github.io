@@ -6,16 +6,16 @@ export const usePosts = () => {
       allMdx {
         edges {
           node {
-            excerpt
+            excerpt(pruneLength: 100)
             frontmatter {
               path
               date
               cover
               title
-              author_name
-              author_email
               episode
               highlight
+              author_name
+              author_email
             }
           }
         }
