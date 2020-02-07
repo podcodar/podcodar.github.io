@@ -3,9 +3,9 @@ import Section from "@components/core/Section"
 
 import { useImages } from "hooks/images"
 
-import { Container, SubTitle, Title, Episode, Image } from "./styled"
+import { Container, SubTitle, Title, Episode, Image, Duration } from "./styled"
 
-const PostGrid = ({ cover, path, episode, title, description }) => {
+const PostGrid = ({ cover, path, episode, title, description, duration }) => {
   const { getImage } = useImages()
   const postMarkImage = getImage("post-mark")
 
@@ -17,6 +17,7 @@ const PostGrid = ({ cover, path, episode, title, description }) => {
           <Title>{title}</Title>
           <SubTitle>{description}</SubTitle>
 
+          <Duration>{duration}</Duration>
           <Image fluid={postMarkImage.fluid} />
         </Container>
       </Section>

@@ -13,6 +13,7 @@ export const usePosts = () => {
               cover
               title
               episode
+              duration
               highlight
               author_name
               author_email

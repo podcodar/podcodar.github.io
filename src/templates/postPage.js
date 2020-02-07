@@ -32,6 +32,7 @@ export const pageQuery = graphql`
         title
         cover
         episode
+        duration
         author_name
         author_email
       }
