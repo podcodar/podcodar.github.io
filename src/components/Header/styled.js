@@ -9,9 +9,26 @@ export const HeaderStyled = styled.header`
 
 export const RightSide = styled.div`
   padding: 3em 0;
+
+  @media screen and (max-width: 600px) {
+    & {
+      padding: 3em 1em;
+    }
+  }
 `
 
 export const Container = styled(CoreContainer)`
   display: flex;
   justify-content: space-between;
+
+  @media screen and (max-width: 600px) {
+    & {
+      display: unset;
+
+      & a {
+        width: 100%;
+        display: block;
+      }
+    }
+  }
 `
