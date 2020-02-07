@@ -5,7 +5,15 @@ import { useImages } from "hooks/images"
 
 import { Container, SubTitle, Title, Episode, Image, Duration } from "./styled"
 
-const PostGrid = ({ cover, path, episode, title, description, duration }) => {
+const PostGrid = ({
+  cover,
+  path,
+  episode,
+  title,
+  description,
+  duration,
+  readingTime,
+}) => {
   const { getImage } = useImages()
   const postMarkImage = getImage("post-mark")
 
@@ -17,7 +25,7 @@ const PostGrid = ({ cover, path, episode, title, description, duration }) => {
           <Title>{title}</Title>
           <SubTitle>{description}</SubTitle>
 
-          <Duration>{duration}</Duration>
+          <Duration>{duration || readingTime}</Duration>
           <Image fluid={postMarkImage.fluid} />
         </Container>
       </Section>

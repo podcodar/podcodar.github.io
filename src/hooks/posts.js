@@ -18,13 +18,22 @@ export const usePosts = () => {
               author_name
               author_email
             }
+            fields {
+              readingTime {
+                text
+              }
+            }
           }
         }
       }
     }
   `)
   const posts = data.allMdx.edges
-    .map(({ node }) => ({ ...node.frontmatter, description: node.excerpt }))
+    .map(({ node }) => ({
+      ...node.frontmatter,
+      description: node.excerpt,
+      readingTime: node.fields.readingTime.text,
+    }))
     .sort((a, b) => a.date - b.date)
 
   const highlightedPosts = posts.filter(({ highlight }) => highlight)

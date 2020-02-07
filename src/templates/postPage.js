@@ -9,10 +9,10 @@ import PostCover from "@components/core/PostCover"
 const PostTemplate = ({ data }) => {
   // this prop will be injected by the GraphQL query below.
   const { mdx } = data // data.mdx holds your post data
-  const { frontmatter, body } = mdx
+  const { frontmatter, body, fields } = mdx
   return (
     <Layout>
-      <PostCover {...frontmatter} />
+      <PostCover {...frontmatter} readingTime={fields.readingTime.text} />
       <Container className="blog-post">
         <h3>{frontmatter.date}</h3>
 
@@ -33,8 +33,11 @@ export const pageQuery = graphql`
         cover
         episode
         duration
-        author_name
-        author_email
+      }
+      fields {
+        readingTime {
+          text
+        }
       }
     }
   }

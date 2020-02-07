@@ -18,6 +18,7 @@
     "gatsby-plugin-react-svg": "^3.0.0",
     "gatsby-plugin-sharp": "^2.4.3",
     "gatsby-plugin-styled-components": "^3.1.19",
+    "gatsby-remark-reading-time": "^1.1.0",
     "gatsby-source-filesystem": "^2.1.48",
     "gatsby-transformer-sharp": "^2.3.13",
     "install": "^0.13.0",

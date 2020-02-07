@@ -36,6 +36,7 @@ module.exports = {
       },
     },
     "gatsby-plugin-mdx",
+    "gatsby-remark-reading-time",
     // module resolver
     {
       resolve: "gatsby-plugin-module-resolver",
