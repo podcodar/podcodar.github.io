@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `PodCodar - Seu canal com a programação `,
-    description: `Comece seus primeiros passos na computação com a gente! Aqui você pode interagir, pode se atualizar quanto as novas tendencias, pode pedir ajuda, pode reclamar e ainda PodCodar :)`,
+    title: `#PodCodar - seu canal com a computação`,
+    description: `Aqui você pode participar, pode perguntar, pode aprender e ainda #PodCodar!`,
     author: `@PodCodar`,
   },
   plugins: [
