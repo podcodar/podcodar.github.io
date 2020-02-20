@@ -6,6 +6,7 @@ import Layout from "@components/Layout"
 import Container from "@components/core/Container"
 import PostCover from "@components/core/PostCover"
 import AuthorProfile from "@components/core/AuthorProfile"
+import SEO from "@components/seo"
 
 const PostTemplate = ({ data }) => {
   // this prop will be injected by the GraphQL query below.
@@ -13,6 +14,11 @@ const PostTemplate = ({ data }) => {
   const { frontmatter, body, fields } = mdx
   return (
     <Layout>
+      <SEO
+        title={`#PodCodar - ${frontmatter.title}`}
+        description={frontmatter.description}
+        image={frontmatter.cover}
+      />
       <PostCover {...frontmatter} readingTime={fields.readingTime.text} />
       <Container className="blog-post">
         <h2>{frontmatter.title}</h2>
