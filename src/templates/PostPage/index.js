@@ -11,12 +11,13 @@ import SEO from "@components/seo"
 const PostTemplate = ({ data }) => {
   // this prop will be injected by the GraphQL query below.
   const { mdx } = data // data.mdx holds your post data
-  const { frontmatter, body, fields } = mdx
+  const { frontmatter, body, fields, excerpt: description } = mdx
+  debugger
   return (
     <Layout>
       <SEO
         title={`#PodCodar - ${frontmatter.title}`}
-        description={frontmatter.description}
+        description={description}
         image={frontmatter.cover}
       />
       <PostCover {...frontmatter} readingTime={fields.readingTime.text} />
@@ -34,6 +35,7 @@ export const pageQuery = graphql`
   query($path: String!) {
     mdx(frontmatter: { path: { eq: $path } }) {
       body
+      excerpt
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         path
