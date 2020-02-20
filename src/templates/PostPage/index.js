@@ -16,7 +16,7 @@ const PostTemplate = ({ data }) => {
   return (
     <Layout>
       <SEO
-        title={`#PodCodar - ${frontmatter.title}`}
+        title={frontmatter.title}
         description={description}
         image={frontmatter.cover}
       />
