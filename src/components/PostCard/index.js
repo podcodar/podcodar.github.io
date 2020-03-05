@@ -9,7 +9,7 @@ const PostCard = ({ item }) => {
       <img src={item.cover} alt="" />
 
       <Content>
-        <h4>{item.title}</h4>
+        <h5>{item.title}</h5>
         <h6>{item.duration || item.readingTime}</h6>
         <p>{item.description}</p>
         <AuthorProfile item={item} small />
