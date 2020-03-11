@@ -12,7 +12,6 @@ const PostTemplate = ({ data }) => {
   // this prop will be injected by the GraphQL query below.
   const { mdx } = data // data.mdx holds your post data
   const { frontmatter, body, fields, excerpt: description } = mdx
-  debugger
   return (
     <Layout>
       <SEO
