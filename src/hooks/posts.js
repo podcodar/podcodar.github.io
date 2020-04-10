@@ -35,6 +35,7 @@ export const usePosts = () => {
       readingTime: node.fields.readingTime.text,
     }))
     .sort((a, b) => a.date - b.date)
+  posts.reverse()
 
   const highlightedPosts = posts.filter(({ highlight }) => highlight)
 

@@ -8,7 +8,7 @@ export const Container = styled.a`
 
   & > img {
     width: 100%;
-    max-height: 180px;
+    height: 180px;
     margin-bottom: -5px;
     /* filter: blur(1px); */
   }
