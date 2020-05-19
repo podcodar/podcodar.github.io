@@ -1,0 +1,113 @@
+---
+path: /exercicios-dicionarios-1
+title: "Exercício #1"
+date: 2020-05-19
+episode: Dicionários
+cover: https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1907&q=80
+author_name: "Cassios Marques"
+author_email: "cassios.kmm@gmail.com"
+highlight: true
+tags: ["exercicio", "programacao"]
+---
+import Logo from "../src/components/Logo"
+
+## Introdução
+Agenda PodCodar
+
+[ tenho que escrever ainda ]
+
+```python
+# A agenda da PodCodar será definida como um dicionário tal que:
+# - a chave é um alias que identifica a pessoa
+# - o valor é um dicionário com todas as informações da pessoa
+podcodar_notebook = {
+    'b1': {
+        'full_name': 'Banana B1',
+        'city': 'Belo Horizonte',
+        'dob': '01/01/1990', # dob means date of birth
+        'email': 'b1@hotmail.com',
+        'buddy': 'Luiz'
+    },
+    'b2': {
+        'full_name': 'Banana B2',
+        'city': 'São Paulo',
+        'dob': '01/01/1990',
+        'email': 'b2@hotmail.com',
+        'buddy': 'Marquin'
+    },
+    'b3': {
+        'full_name': 'Banana B3',
+        'dob': '01/01/1990',
+        'email': 'b2@hotmail.com',
+    },
+}
+```
+
+## Exercícios
+a) implemente uma função que imprime na tela todas as informações de uma pessoa.
+```python
+def print_person_info(notebook, alias):
+    # TODO
+```
+
+b) implemente uma função que imprime na tela a cidade de uma pessoa.
+```python
+def print_person_city(notebook, alias):
+    # TODO
+```
+
+c) implemente uma função que imprime na tela uma informação específica de uma pessoa. Se a informação requisitada não existir, imprimir na tela um aviso que a informação não existe.
+```python
+def print_person_specific_info(notebook, alias, info_key):
+    # TODO
+```
+
+d) implemente uma função que imprime na tela o número de pessoas que utilizam Gmail.
+```python
+def count_gmail_users(notebook, alias):
+    # TODO
+```
+
+e) implemente uma função que imprime na tela a idade de uma pessoa. Para isso, utilize a função abaixo que retorna o ano dado uma data de aniversário no formato string.
+```python
+# recebe uma data no formato string e retorna o ano nascimento no formato inteiro. Ex:
+# get_year_of_birth('15/06/1990') == 1990
+def get_year_of_birth(dob):
+    return int(dob[-4:])
+
+def print_age(notebook, alias):
+    # TODO
+```
+
+f) implemente uma função que adiciona as informações de uma nova pessoa à agenda. Se a pessoa já estiver na agenda, um erro deverá ser impresso na tela e o registro existente NÃO deverá ser alterado.
+```python
+def add_person_info(notebook, alias, info):
+    # TODO
+```
+
+g) modifique a função anterior para verificar se as seguintes informações foram providas pelo usuário: *full_name* e *email*.
+Se faltarem estas informações um erro deverá ser impresso na tela e o registro NÃO deverá ser adicionado à agenda.
+
+h) implemente uma função que apaga uma pessoa da agenda. Se a pessoa não existir, um aviso deverá ser impresso na tela.
+```python
+def delete_person(notebook, alias):
+    # TODO
+```
+
+
+## Exercícios extras
+[ adicionar exercícios: acompanhar frequencia ou entrega de listas ]
+
+
+## Dúvidas?
+Comenta lá no nosso grupo do Discord ou pergunte ao seu padrinho.
+
+
+## Entrega
+
+Nomeie o arquivo de código com o seu nome (ex: antonio_barbosa.py) e faça o upload na seguinte pasta do GDrive:
+https://drive.google.com/drive/folders/1wwQhNdeU_lyFmbb15JoHIo_WEg2FHx25?usp=sharing
+
+<div style={{alignItems: "center", display: "flex", justifyContent: "center"}}>
+    <Logo/>
+</div>
