@@ -12,7 +12,67 @@ tags: ["exercicio", "programacao"]
 import Logo from "../src/components/Logo"
 
 ## Introdução
-[falta introdução. Explicar dicionário e dar exemplos]
+Dicionário é uma coleção de dados **desordenados** estruturados na forma de pares chave/valor. As chaves são strings e os valores podem ser de qualquer tipo: inteiro, decimal, booleano, lista e até mesmo outro dicionário.
+Em Python, dicionários são definidos com *{}*.
+
+Veja abaixo o exemplo de um dicionário que representa as características de uma cadeira e as operações que podemos fazer.
+
+```python
+# Exemplo de dicionário que mapeia as características de uma cadeira
+chair = {
+    'weight': 18.5,
+    'dimensions': '129x69x64cm',
+    'available_colors': ['black', 'blue'],
+    'price': 764.10,
+    'customer_stars': 3.7
+}
+
+### Operações básicas ###
+# imprimir na tela o dicionário completo
+print(chair)
+
+# acessar um atributo do dicionário
+weight = chair['weight']
+print(weight)
+
+# mudar o valor de um atributo
+chair['price'] = 811.99
+print(chair)
+
+# verificar se uma chave existe no dicionário
+print('customer_stars' in chair)
+print('brand' in chair)
+
+# verificar o número de itens do dicionário
+size = len(chair)
+print(size)
+
+# remover um item do dicionário
+del(chair['dimensions'])
+print(chair)
+
+# adicionar um item ao dicionário
+chair['brand'] = 'SuperChairs'
+print(chair)
+
+# iterar sob as chaves do dicionário
+print('Printing dictionary keys:')
+for key in chair.keys():
+    print(key)
+
+# iterar sob os valores do dicionário
+print('Printing dictionary values:')
+for value in chair.values():
+    print(value)
+
+# iterar sob as chaves e valores do dicionário
+print('Printing dictionary keys and values:')
+for key, value in chair.items():
+    print(key)
+    print(value)
+    print('') # imprimir linha em branco
+```
+
 
 ## Exercícios - Agenda PodCodar
 A PodCodar está crescendo e precisa da sua ajuda para fazer um programa que gerencie as informações dos alunos.
