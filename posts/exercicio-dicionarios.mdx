@@ -12,10 +12,13 @@ tags: ["exercicio", "programacao"]
 import Logo from "../src/components/Logo"
 
 ## Introdução
-Agenda PodCodar
+[falta introdução. Explicar dicionário e dar exemplos]
 
-[ tenho que escrever ainda ]
+## Exercícios - Agenda PodCodar
+A PodCodar está crescendo e precisa da sua ajuda para fazer um programa que gerencie as informações dos alunos.
+Gostaríamos de poder adicionar novos alunos, consultar as informações de um aluno, consultar presença e entrega das listas de exercícios, entre outras funcionalidades.
 
+O tipo dicionário que acabamos de aprender é uma boa estrutura para guardarmos os dados dos alunos. A chave deverá ser o *alias* do aluno e o valor um outro dicionário com as informações do aluno. Veja o exemplo a seguir:
 ```python
 # A agenda da PodCodar será definida como um dicionário tal que:
 # - a chave é um alias que identifica a pessoa
@@ -37,13 +40,13 @@ podcodar_notebook = {
     },
     'b3': {
         'full_name': 'Banana B3',
-        'dob': '01/01/1990',
+        'dob': '01/01/1992',
         'email': 'b2@hotmail.com',
     },
 }
 ```
+Com esta estrutura de dados é possível guardar estaticamente as informações dos nossos alunos. Contudo, ainda precisamos implementar algumas funcionalidades para deixar a agenda mais dinâmica e facilitar as consultas. Vamos lá?
 
-## Exercícios
 a) implemente uma função que imprime na tela todas as informações de uma pessoa.
 ```python
 def print_person_info(notebook, alias):
@@ -95,9 +98,44 @@ def delete_person(notebook, alias):
 ```
 
 
-## Exercícios extras
-[ adicionar exercícios: acompanhar frequencia ou entrega de listas ]
+## Desafios
+A PodCodar gostou muito dos seus serviços e decidiu te contratar pra desenvolver mais uma funcionalidade para a nossa agenda.
+Gostaríamos de acompanhar as entregas de para-casa dos alunos. Para tal, adicione uma nova propriedade às informações do usuário na qual serão listados os exercícios entregues. Ex:
+```python
+podcodar_notebook = {
+    'b1': {
+        'full_name': 'Banana B1',
+        'city': 'Belo Horizonte',
+        'dob': '01/01/1990', # dob means date of birth
+        'email': 'b1@hotmail.com',
+        'buddy': 'Luiz',
+        'deliveredHomeworks': ['homeworkWeek1', 'homeworkWeek4']
+    },
+}
+```
+a) implemente uma função que adiciona um para-casa à lista de para-casa de uma pessoa.
+```python
+def set_homework_completion(notebook, alias, homework):
+    # TODO
+```
 
+b) implemente uma função que imprime na tela a quantidade de para-casa que um aluno entregou.
+```python
+def count_homeworks(notebook, alias):
+    # TODO
+```
+
+c) implemente uma função que imprime na tela a quantidade de para-casa que cada aluno entregou.
+```python
+def count_homeworks_for_all(notebook):
+    # TODO
+```
+
+d) implemente uma função que imprime na tela quantas pessoas entregaram um para-casa.
+```python
+def count_homework_completion(notebook, homework):
+    # TODO
+```
 
 ## Dúvidas?
 Comenta lá no nosso grupo do Discord ou pergunte ao seu padrinho.
