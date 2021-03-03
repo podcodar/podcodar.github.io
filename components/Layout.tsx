@@ -1,41 +1,69 @@
-import React, { ReactNode } from 'react'
-import Link from 'next/link'
-import Head from 'next/head'
+import { Layout, Menu, Breadcrumb } from 'antd';
+import {
+  DesktopOutlined,
+  PieChartOutlined,
+  FileOutlined,
+  TeamOutlined,
+  UserOutlined,
+} from '@ant-design/icons';
+import React from 'react';
 
-type Props = {
-  children?: ReactNode
-  title?: string
+const { Header, Content, Footer, Sider } = Layout;
+const { SubMenu } = Menu;
+
+class SiderDemo extends React.Component {
+  state = {
+    collapsed: false,
+  };
+
+  onCollapse = (collapsed: boolean) => {
+    console.log(collapsed);
+    this.setState({ collapsed });
+  };
+
+  render() {
+    const { collapsed } = this.state;
+    return (
+      <Layout style={{ minHeight: '100vh' }}>
+        <Sider collapsible collapsed={collapsed} onCollapse={this.onCollapse}>
+          <div className="logo" />
+          <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline">
+            <Menu.Item key="1" icon={<PieChartOutlined />}>
+              Option 1
+            </Menu.Item>
+            <Menu.Item key="2" icon={<DesktopOutlined />}>
+              Option 2
+            </Menu.Item>
+            <SubMenu key="sub1" icon={<UserOutlined />} title="User">
+              <Menu.Item key="3">Tom</Menu.Item>
+              <Menu.Item key="4">Bill</Menu.Item>
+              <Menu.Item key="5">Alex</Menu.Item>
+            </SubMenu>
+            <SubMenu key="sub2" icon={<TeamOutlined />} title="Team">
+              <Menu.Item key="6">Team 1</Menu.Item>
+              <Menu.Item key="8">Team 2</Menu.Item>
+            </SubMenu>
+            <Menu.Item key="9" icon={<FileOutlined />}>
+              Files
+            </Menu.Item>
+          </Menu>
+        </Sider>
+        <Layout className="site-layout">
+          <Header className="site-layout-background" style={{ padding: 0 }} />
+          <Content style={{ margin: '0 16px' }}>
+            <Breadcrumb style={{ margin: '16px 0' }}>
+              <Breadcrumb.Item>User</Breadcrumb.Item>
+              <Breadcrumb.Item>Bill</Breadcrumb.Item>
+            </Breadcrumb>
+            <div className="site-layout-background" style={{ padding: 24, minHeight: 360 }}>
+              {this.props.children}
+            </div>
+          </Content>
+          <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
+        </Layout>
+      </Layout>
+    );
+  }
 }
 
-const Layout = ({ children, title = 'This is the default title' }: Props) => (
-  <div>
-    <Head>
-      <title>{title}</title>
-      <meta charSet="utf-8" />
-      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-    </Head>
-    <header>
-      <nav>
-        <Link href="/">
-          <a>Home</a>
-        </Link>{' '}
-        |{' '}
-        <Link href="/about">
-          <a>About</a>
-        </Link>{' '}
-        |{' '}
-        <Link href="/users">
-          <a>Users List</a>
-        </Link>{' '}
-        | <a href="/api/users">Users API</a>
-      </nav>
-    </header>
-    {children}
-    <footer>
-      <hr />
-      <span>I'm here to stay (Footer)</span>
-    </footer>
-  </div>
-)
-
-export default Layout
+export default SiderDemo;
