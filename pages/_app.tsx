@@ -10,7 +10,6 @@ function AppLayout({ Component, pageProps }: AppProps) {
     <>
       <Head>
         <link rel="shortcut icon" href={seoConfig.faviconPath} />
-
         <title>{seoConfig.title}</title>
       </Head>
       <LandingPageLayout>
