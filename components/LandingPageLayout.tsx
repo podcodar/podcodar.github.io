@@ -15,6 +15,7 @@ export default function LandingPageLayout({
       <Header style={{ display: 'flex' }}>
         <div style={{ flex: 1 }} >
           <Image
+            unoptimized
             src="/images/logo-with-name.png"
             alt="Picture of the author"
             width={120}
