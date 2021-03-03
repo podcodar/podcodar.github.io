@@ -1,0 +1,30 @@
+name: Next.js publish
+
+on:
+  push:
+    branches:
+      - "main"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Build next.js app
+        run: |
+          yarn
+          yarn build:static
+      - name: Preparing github page..
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[deploy-bot]"
+          git checkout -b gh-pages
+          cp -r out/* .
+          rm -rf out
+          git add .
+          git commit -m "Release github page from Next.js app"
+      - name: Deploying Github Page
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: gh-pages
