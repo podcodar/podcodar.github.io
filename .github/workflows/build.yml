@@ -1,0 +1,17 @@
+name: Build app
+
+on:
+  push:
+    branches-ignore:
+      - "main"
+      - "gh-pages"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Build next.js app
+        run: |
+          yarn
+          yarn build:static
