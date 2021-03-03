@@ -1,12 +1,13 @@
 import { AppProps } from "next/app";
+import LandingPageLayout from "../components/LandingPageLayout";
+
 import 'antd/dist/antd.css';
-import SiderDemo from "../components/Layout";
 
 function AppLayout({ Component, pageProps }: AppProps) {
   return (
-    <SiderDemo>
+    <LandingPageLayout>
       <Component {...pageProps} />
-    </SiderDemo>
+    </LandingPageLayout>
   );
 }
 
