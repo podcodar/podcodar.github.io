@@ -1,12 +1,12 @@
-# TypeScript Next.js example
+# PodCodar Landing Page
 
-This is a really simple project that shows the usage of Next.js with TypeScript.
+[![Build app](https://github.com/podcodar/podcodar.github.io/actions/workflows/build.yml/badge.svg)](https://github.com/podcodar/podcodar.github.io/actions/workflows/build.yml)
 
-## Deploy your own
+[![Next.js publish](https://github.com/podcodar/podcodar.github.io/actions/workflows/gh-pages.yml/badge.svg)](https://github.com/podcodar/podcodar.github.io/actions/workflows/gh-pages.yml)
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
+This repo is the landing page we have created to PodCodar.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-typescript&project-name=with-typescript&repository-name=with-typescript)
+This is a simple Next.js application with TypeScript, check below how does it work.
 
 ## How to use it?
 
