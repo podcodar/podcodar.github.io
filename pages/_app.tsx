@@ -3,6 +3,7 @@ import Head from "next/head";
 import seoConfig from "#/config/seo.json"
 import LandingPageLayout from "../components/LandingPageLayout";
 
+import '#/components/styles.sass';
 import 'antd/dist/antd.css';
 
 function AppLayout({ Component, pageProps }: AppProps) {
