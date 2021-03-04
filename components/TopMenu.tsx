@@ -1,5 +1,5 @@
 import { Layout, Menu } from 'antd'
-import React, { useState } from 'react'
+import React from 'react'
 
 const menuItems = [
   { text: "Home", href: '#'},
@@ -21,8 +21,6 @@ function Logo() {
 
 
 export default function TopMenu() {
-  const handleClick = (key: string) =>
-    () => setSelectedKey(key)
   return (
     <Layout.Header className="navbar">
       <div className="container">
