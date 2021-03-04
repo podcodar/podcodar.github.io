@@ -10,6 +10,7 @@
     "type-check": "tsc"
   },
   "dependencies": {
+    "@ant-design/icons": "^4.5.0",
     "antd": "^4.13.0",
     "next": "latest",
     "next-sass": "^1.0.3",
