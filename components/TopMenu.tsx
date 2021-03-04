@@ -1,5 +1,4 @@
 import { Layout, Menu } from 'antd'
-import Image from 'next/image'
 import React, { useState } from 'react'
 
 const menuItems = [
@@ -10,8 +9,7 @@ const menuItems = [
 
 function Logo() {
   return (
-    <Image
-      unoptimized
+    <img
       src="/images/logo-with-name.png"
       alt="Picture of the author"
       width={120}
