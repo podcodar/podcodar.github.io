@@ -2,9 +2,10 @@ import { Layout, Menu } from 'antd'
 import React, { useState } from 'react'
 
 const menuItems = [
-  "Home",
-  "Como Funciona?",
-  "Faça Parte!",
+  { text: "Home", href: '#'},
+  { text: "Wiki", href: 'https://github.com/podcodar/wiki/wiki', target: '_blank'},
+  { text: "Como Funciona?", href: '#'},
+  { text: "Faça Parte!", href: '#'},
 ]
 
 function Logo() {
@@ -20,7 +21,6 @@ function Logo() {
 
 
 export default function TopMenu() {
-  const [selectedKey, setSelectedKey] = useState('1')
   const handleClick = (key: string) =>
     () => setSelectedKey(key)
   return (
@@ -33,12 +33,13 @@ export default function TopMenu() {
         <Menu
           theme="dark"
           mode="horizontal"
-          defaultSelectedKeys={[selectedKey]}
           className="navbar-items"
         >
-          {menuItems.map(item => (
-            <Menu.Item key={item} onClick={handleClick(item)} >
-              {item}
+          {menuItems.map((item) => (
+            <Menu.Item key={item.text} >
+              <a target={item.target || ''} href={item.href} >
+                {item.text}
+              </a>
             </Menu.Item>
           ))}
         </Menu>
