@@ -1,0 +1,40 @@
+$text-color: whitesmoke
+$navbar-bg-color: #411d2f
+$navbar-bg-opacity: rgba($navbar-bg-color, 0.80)
+
+$home-bg-img: url(/images/the-matrix.jpg)
+
+.container
+  display: flex
+  width: 100%
+  max-width: 960px
+  margin: 0 auto
+
+.navbar
+  display: flex
+  position: fixed
+  width: 100vw
+  background: unset !important
+
+  img
+    margin-top: 1rem
+
+  .navbar-items
+    background: unset !important
+
+.home-section
+  padding: 40vh 0
+  background: $navbar-bg-opacity
+  min-height: 100%
+  background: linear-gradient(0deg, $navbar-bg-opacity, $navbar-bg-opacity), $home-bg-img
+  background-size: cover
+
+  .container
+    display: block
+
+  h1
+    color: $text-color !important
+
+  h3
+    color: rgba($text-color, 0.8) !important
+
