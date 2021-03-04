@@ -1,10 +1,8 @@
-import Link from 'next/link'
+import HomeSection from '#/components/HomeSection'
 
 const IndexPage = () => (
   <>
-    <h1>Hello Next.js 👋</h1>
-
-    <Link href="/about">About page</Link>
+    <HomeSection />
   </>
 )
 

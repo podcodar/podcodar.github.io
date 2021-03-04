@@ -12,8 +12,10 @@
   "dependencies": {
     "antd": "^4.13.0",
     "next": "latest",
+    "next-sass": "^1.0.3",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react-dom": "^17.0.1",
+    "sass": "^1.32.8"
   },
   "devDependencies": {
     "@types/node": "^12.12.21",
