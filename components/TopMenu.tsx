@@ -1,8 +1,5 @@
 import { Layout, Menu } from 'antd'
 import React from 'react'
-import { GithubOutlined } from '@ant-design/icons';
-
-import seoConfig from "#/config/seo.json"
 
 const menuItems = [
   { text: "Home", href: '#'},
@@ -14,10 +11,9 @@ const menuItems = [
 function Logo() {
   return (
     <img
-      src="/images/logo-with-name.png"
-      alt="Picture of the author"
-      width={120}
-      height={50}
+      src="/images/logo-text.png"
+      width={94}
+      height={94}
     />
   )
 }
@@ -44,10 +40,6 @@ export default function TopMenu() {
             </Menu.Item>
           ))}
         </Menu>
-
-        <a href={seoConfig.githubRepo} target="_blank" className="icon" >
-          <GithubOutlined />
-        </a>
       </div>
     </Layout.Header>
   )
