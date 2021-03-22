@@ -1,0 +1,41 @@
+root: true
+parser: "@typescript-eslint/parser"
+extends:
+  - airbnb
+  - prettier
+  - eslint:recommended
+  - plugin:@typescript-eslint/eslint-recommended
+  - plugin:@typescript-eslint/recommended
+  - plugin:react/recommended
+  - plugin:import/errors
+  - plugin:import/warnings
+  - plugin:import/typescript
+plugins:
+  - prettier
+  - "@typescript-eslint"
+  - import
+ignorePatterns:
+  - "node_modules"
+  - ".next"
+  - "out"
+rules:
+  prettier/prettier: error
+  react/jsx-filename-extension: [warn, { extensions: [".tsx"] }]
+  react/react-in-jsx-scope: off
+  react/jsx-props-no-spreading: off
+  import/prefer-default-export: off
+  import/extensions: off
+  jsx-a11y/anchor-is-valid: off
+  import/order:
+    [
+      error,
+      {
+        newlines-between: "always",
+        alphabetize: { order: "asc" },
+        groups:
+          ["builtin", "external", "internal", "parent", "sibling", "index"],
+      },
+    ]
+globals: { React: "writable" }
+settings:
+  import/resolver: typescript
