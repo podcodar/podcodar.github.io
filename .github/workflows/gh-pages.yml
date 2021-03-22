@@ -3,7 +3,7 @@ name: Next.js publish
 on:
   push:
     branches:
-      - "main"
+      - 'main'
 
 jobs:
   build:

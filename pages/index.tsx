@@ -1,9 +1,11 @@
-import HomeSection from '#/components/HomeSection'
+import { ReactElement } from 'react';
 
-const IndexPage = () => (
+import HomeSection from '#/components/HomeSection';
+
+const IndexPage = (): ReactElement => (
   <>
     <HomeSection />
   </>
-)
+);
 
-export default IndexPage
+export default IndexPage;

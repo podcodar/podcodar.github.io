@@ -1,5 +1,5 @@
 root: true
-parser: "@typescript-eslint/parser"
+parser: '@typescript-eslint/parser'
 extends:
   - airbnb
   - prettier
@@ -12,15 +12,15 @@ extends:
   - plugin:import/typescript
 plugins:
   - prettier
-  - "@typescript-eslint"
+  - '@typescript-eslint'
   - import
 ignorePatterns:
-  - "node_modules"
-  - ".next"
-  - "out"
+  - 'node_modules'
+  - '.next'
+  - 'out'
 rules:
   prettier/prettier: error
-  react/jsx-filename-extension: [warn, { extensions: [".tsx"] }]
+  react/jsx-filename-extension: [warn, { extensions: ['.tsx'] }]
   react/react-in-jsx-scope: off
   react/jsx-props-no-spreading: off
   import/prefer-default-export: off
@@ -30,12 +30,12 @@ rules:
     [
       error,
       {
-        newlines-between: "always",
-        alphabetize: { order: "asc" },
+        newlines-between: 'always',
+        alphabetize: { order: 'asc' },
         groups:
-          ["builtin", "external", "internal", "parent", "sibling", "index"],
+          ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
       },
     ]
-globals: { React: "writable" }
+globals: { React: 'writable' }
 settings:
   import/resolver: typescript
