@@ -11,10 +11,9 @@ const menuItems = [
 function Logo() {
   return (
     <img
-      src="/images/logo-with-name.png"
-      alt="Picture of the author"
-      width={120}
-      height={50}
+      src="/images/logo-sem-img.png"
+      width={94}
+      height={94}
     />
   )
 }
