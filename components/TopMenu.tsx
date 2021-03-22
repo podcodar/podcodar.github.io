@@ -11,7 +11,7 @@ const menuItems = [
 function Logo() {
   return (
     <img
-      src="/images/logo-sem-img.png"
+      src="/images/logo-text.png"
       width={94}
       height={94}
     />
