@@ -9,6 +9,11 @@ export const colors = {
 
 export const GlobalStyles = createGlobalStyle`
   ${reset}
+
+  // Setting Roboto font
+  body {
+    font-family: Roboto;
+  }
 `;
 
 export const Container = styled.div`
