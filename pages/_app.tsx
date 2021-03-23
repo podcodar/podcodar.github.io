@@ -1,12 +1,15 @@
-import { AppProps } from "next/app";
-import Head from "next/head";
-import seoConfig from "#/config/seo.json"
-import LandingPageLayout from "../components/LandingPageLayout";
+import { AppProps } from 'next/app';
+import Head from 'next/head';
+import { ReactElement } from 'react';
+
+import LandingPageLayout from '../components/LandingPageLayout';
+
+import seoConfig from '#/config/seo.json';
 
 import '#/components/styles.sass';
 import 'antd/dist/antd.css';
 
-function AppLayout({ Component, pageProps }: AppProps) {
+function AppLayout({ Component, pageProps }: AppProps): ReactElement {
   return (
     <>
       <Head>
@@ -20,4 +23,4 @@ function AppLayout({ Component, pageProps }: AppProps) {
   );
 }
 
-export default AppLayout
+export default AppLayout;

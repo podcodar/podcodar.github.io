@@ -3,8 +3,8 @@ name: Build app
 on:
   push:
     branches-ignore:
-      - "main"
-      - "gh-pages"
+      - 'main'
+      - 'gh-pages'
 
 jobs:
   build:
