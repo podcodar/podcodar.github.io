@@ -4,18 +4,18 @@ import HomeSection from '#/components/HomeSection';
 
 const IndexPage = (): ReactElement => (
   <>
-  <style jsx global>{`
-  html,
-  body {
-    padding: 0;
-    margin: 0;
-    font-family: Roboto;
-  }
+    <style jsx global>{`
+      html,
+      body {
+        padding: 0;
+        margin: 0;
+        font-family: Roboto;
+      }
 
-  * {
-    box-sizing: border-box;
-  }
-`}</style>
+      * {
+        box-sizing: border-box;
+      }
+    `}</style>
     <HomeSection />
   </>
 );
