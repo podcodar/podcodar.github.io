@@ -4,14 +4,13 @@ import { ReactElement } from 'react';
 
 import LandingPageLayout from '../components/LandingPageLayout';
 
+import { GlobalStyles } from '#/components/shared/styled';
 import seoConfig from '#/config/seo.json';
-
-import '#/components/styles.sass';
-import 'antd/dist/antd.css';
 
 function AppLayout({ Component, pageProps }: AppProps): ReactElement {
   return (
     <>
+      <GlobalStyles />
       <Head>
         <link rel="shortcut icon" href={seoConfig.faviconPath} />
         <title>{seoConfig.title}</title>
