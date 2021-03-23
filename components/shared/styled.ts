@@ -26,13 +26,3 @@ export const Container = styled.div`
     max-width: 1440px;
   }
 `;
-
-export const AppLayoutContainer = styled.div`
-  min-height: 100vh;
-`;
-
-export const FooterContainer = styled.div`
-  & > p {
-    text-align: center;
-  }
-`;

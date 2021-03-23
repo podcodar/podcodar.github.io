@@ -1,6 +1,11 @@
 import { ReactElement } from 'react';
+import styled from 'styled-components';
 
-import { FooterContainer } from './shared/styled';
+const FooterContainer = styled.div`
+  & > p {
+    text-align: center;
+  }
+`;
 
 export default function Footer(): ReactElement {
   return (
