@@ -22,7 +22,7 @@ jobs:
           cp -r out/* .
           rm -rf out
           git add .
-          git commit -m "Release github page from Next.js app"
+          git commit -m "Release github page from Next.js app" --no-verify
       - name: Deploying Github Page
         uses: ad-m/github-push-action@master
         with:
