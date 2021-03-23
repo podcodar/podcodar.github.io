@@ -1,5 +1,7 @@
-import { Layout, Menu } from 'antd';
 import { ReactElement } from 'react';
+import styled from 'styled-components';
+
+import { colors, Container } from './shared/styled';
 
 const menuItems = [
   { text: 'Home', href: '#' },
@@ -12,28 +14,54 @@ const menuItems = [
   { text: 'Faça Parte!', href: '#' },
 ];
 
+const NavBarContainer = styled.nav`
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  width: 100vw;
+`;
+
+const LogoContainer = styled.div`
+  flex: 1;
+
+  img {
+    height: 4rem;
+  }
+`;
+
+const MenuList = styled.div`
+  display: flex;
+`;
+
+const MenuItem = styled.div`
+  padding: 2rem 1rem;
+  color: ${colors.textColor};
+`;
+
 function Logo() {
-  return <img src="/images/logo-text.png" alt="logo" width={94} height={94} />;
+  return (
+    <LogoContainer>
+      <img src="/images/logo-text.png" alt="logo" />
+    </LogoContainer>
+  );
 }
 
 export default function TopMenu(): ReactElement {
   return (
-    <Layout.Header className="navbar">
-      <div className="container">
-        <div style={{ flex: 1 }}>
-          <Logo />
-        </div>
+    <NavBarContainer>
+      <Container>
+        <Logo />
 
-        <Menu theme="dark" mode="horizontal" className="navbar-items">
+        <MenuList>
           {menuItems.map((item) => (
-            <Menu.Item key={item.text}>
+            <MenuItem key={item.text}>
               <a target={item.target || ''} href={item.href}>
                 {item.text}
               </a>
-            </Menu.Item>
+            </MenuItem>
           ))}
-        </Menu>
-      </div>
-    </Layout.Header>
+        </MenuList>
+      </Container>
+    </NavBarContainer>
   );
 }
