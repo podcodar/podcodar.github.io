@@ -27,3 +27,18 @@ export const Container = styled.div`
     max-width: 1440px;
   }
 `;
+
+export const Grid = styled.div<{ cols: number }>`
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(${(props) => props.cols}, 1fr);
+  gap: 1rem;
+  align-self: start;
+  > * {
+    min-width: 0;
+  }
+`;
+
+export const Cell = styled.div<{ span?: number }>`
+  grid-column: span ${(props) => props.span ?? 1};
+`;
