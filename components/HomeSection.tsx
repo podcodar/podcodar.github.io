@@ -1,17 +1,14 @@
 import { ReactElement } from 'react';
 import styled from 'styled-components';
 
-import { colors, Container } from './shared/styled';
+import { device } from './shared/devices';
+import { Cell, colors, Container, Grid } from './shared/styled';
 
 import seoConfig from '#/config/seo.json';
 
 const HomeSectionContainer = styled.div`
-  padding: 30vh 0;
-  min-height: 100%;
-
-  & > div {
-    display: block;
-  }
+  padding: 10rem 0;
+  text-align: center;
 
   h1 {
     font-size: 2rem;
@@ -24,18 +21,38 @@ const HomeSectionContainer = styled.div`
   h2 {
     color: ${colors.textColor};
     padding: 1rem 0;
+
+    // large fone or upper
+    @media ${device.mobileL} {
+      text-align: left;
+    }
   }
+
+  img {
+    width: 100%;
+  }
+`;
+
+const HomeInfo = styled(Cell)`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 `;
 
 export default function HomeSection(): ReactElement {
   return (
     <HomeSectionContainer>
       <Container>
-        <h1>{seoConfig.homeMainMessage}</h1>
-        <h2>{seoConfig.homeSecondaryMessage}</h2>
+        <Grid cols={2} sm={1}>
+          <HomeInfo>
+            <h1>{seoConfig.homeMainMessage}</h1>
+            <h2>{seoConfig.homeSecondaryMessage}</h2>
+          </HomeInfo>
+          <Cell>
+            <img src="images/podcodar-bg.png" alt="PodCodar Background" />
+          </Cell>
+        </Grid>
       </Container>
     </HomeSectionContainer>
   );
 }
-
-// const Conta
