@@ -4,7 +4,7 @@ import { reset } from 'styled-reset';
 import { device } from './devices';
 
 export const colors = {
-  textColor: '#dddddd',
+  textColor: '#00000',
 };
 
 export const GlobalStyles = createGlobalStyle`
@@ -19,6 +19,7 @@ export const GlobalStyles = createGlobalStyle`
 export const Container = styled.div`
   display: flex;
   margin: 0 auto;
+  padding: 0 1rem;
   max-width: 960px;
 
   // for screens with more than 1920px, change max width
