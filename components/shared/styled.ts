@@ -28,14 +28,27 @@ export const Container = styled.div`
   }
 `;
 
-export const Grid = styled.div<{ cols: number }>`
+interface GridProps {
+  cols: number;
+  sm?: number;
+  lg?: number;
+}
+export const Grid = styled.div<GridProps>`
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(${(props) => props.cols}, 1fr);
+  grid-template-columns: repeat(${(props) => props.sm ?? props.cols}, 1fr);
   gap: 1rem;
   align-self: start;
   > * {
     min-width: 0;
+  }
+
+  @media ${device.mobileL} {
+    grid-template-columns: repeat(${(props) => props.cols}, 1fr);
+  }
+
+  @media ${device.desktop} {
+    grid-template-columns: repeat(${(props) => props.lg ?? props.cols}, 1fr);
   }
 `;
 
