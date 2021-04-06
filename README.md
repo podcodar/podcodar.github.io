@@ -14,6 +14,7 @@ The tools used in this project are:
 
 - [Next.js](https://nextjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
+- [Yarn](https://yarnpkg.com/)
 
 For more information about each tool ref to their respective documentation.
 
@@ -22,16 +23,12 @@ For more information about each tool ref to their respective documentation.
 After cloning go to the respective folder and use the command below to install the depedencies.
 
 ```bash
-npm install
-# or
 yarn
 ```
 
 After this you can open the project running the script
 
 ```bash
-npm dev
-# or
 yarn dev
 ```
 
