@@ -1,7 +1,7 @@
 {
   "title": "PodCodar - comunidade de código",
   "faviconPath": "/images/favicon.ico",
-  "homeMainMessage": "Quer aprender a programar?",
-  "homeSecondaryMessage": "Então cola na PodCodar!",
+  "homeMainMessage": "Junte-se a nossa comunidade",
+  "homeSecondaryMessage": "e descubra que você também PodCodar!",
   "githubRepo": "https://github.com/podcodar/podcodar.github.io"
 }
